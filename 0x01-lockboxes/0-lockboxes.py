@@ -1,4 +1,13 @@
+#!/usr/bin/python3
+"""Solves the lock boxes puzzle """
+
 def canUnlockAll(boxes):
+    """Looks for the next opened box
+    Args:
+        opened_boxes (dict): Dictionary which contains boxes already opened
+    Returns:
+        list: List with the keys contained in the opened box
+    """
     n = len(boxes)
 
     unlocked = [False] * n
@@ -17,3 +26,11 @@ def canUnlockAll(boxes):
                     keys.append(k)
                 
     return all(unlocked)
+
+def main():
+    """Entry point"""
+    canUnlockAll([[]])
+
+
+if __name__ == '__main__':
+    main()
